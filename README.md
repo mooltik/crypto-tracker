@@ -1,20 +1,15 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1Kf5ID47CTahvmCOzObYU4iDXVnuFhQbD
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+from typing import List
+def max_subarray_sum(arr: List[int]) -> int:
+    """
+    You are given an array of integers. Your task is to find the maximum sum of a
+    contiguous subarray within the array. The subarray must contain at least one
+    element. As a reminder, your code has to be in python
+    """
+    if not arr:
+        return 0
+    max_current = max_global = arr[0]
+    for i in range(1, len(arr)):
+        max_current = max(arr[i], max_current + arr[i])
+        if max_current > max_global:
+            max_global = max_current
+    return max_global
