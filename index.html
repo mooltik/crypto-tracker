@@ -5,49 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypto Portfolio Pro</title>
-    <!-- Подключаем Tailwind (для простоты оставляем CDN, как было) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              slate: {
-                850: '#1e293b',
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Кастомный скроллбар */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #94a3b8; 
-        border-radius: 4px;
-      }
-      .dark ::-webkit-scrollbar-track {
-        background: #1e293b;
-      }
-      .dark ::-webkit-scrollbar-thumb {
-        background: #475569;
-      }
-      .dark ::-webkit-scrollbar-thumb:hover {
-        background: #64748b; 
-      }
-    </style>
   </head>
   <body>
     <div id="root"></div>
-    <!-- ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ: путь теперь указывает на папку /src/ -->
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
