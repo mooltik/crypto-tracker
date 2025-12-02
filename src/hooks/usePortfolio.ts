@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { Asset, Purchase, PortfolioExportData } from '../types';
+import { Asset, Purchase } from '../types';
 import { generateId } from '../utils';
 
 const INITIAL_ASSET: Asset = {
